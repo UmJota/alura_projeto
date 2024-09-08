@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Quiz</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/bph3dvy.css">
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <!-- Botão de informação que aciona a função info() ao ser clicado -->
+        <button onclick="info()" class="button__info" id="info">
+            <!-- Ícone do botão de informação -->
+            <img class="header__button__info" src="./images/info_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg" alt="botão de informação">
+        </button>
+        <!-- Imagem do logotipo da Alura Quiz no cabeçalho -->
+        <img class="header__image" src="./images/LOGO.png" alt="alura quiz logo">
+    </header>
+    <!-- Seção principal que contém os tabs (abas) -->
+    <div class="shows">
+        <!-- Navegação entre as abas -->
+        <nav class="shows__tabs">
+            <!-- Cada botão representa uma aba e alterna entre elas quando clicado -->
+            <button data-tab-button="aluraQuiz" class="shows__tabs__button shows__tabs__button--is-active">
+                alura quiz
+            </button>
+            <button data-tab-button="aluraPlanos" class="shows__tabs__button">
+                alura planos
+            </button>
+            <button data-tab-button="fiap" class="shows__tabs__button">
+                FIAP
+            </button>
+        </nav>
+
+        <!-- Primeira aba: conteúdo da seção "aluraQuiz" -->
+        <section data-tab-id="aluraQuiz" class="aluraquiz tab tab--is-active">
+            <section class="aluraquiz__header">
+                <h2 class="aluraquiz__header__text">Qual é a escola?</h2>
+                <!-- Input de pesquisa e botão de ação -->
+                <div class="aluraquiz__header__search">
+                    <input type="text" placeholder="Digite o nome de uma escola" id="placeHolder">
+                    <!-- Botão que chama a função pesquisar() ao ser clicado -->
+                    <button onclick="pesquisar()">Pesquisar</button>
+                </div>
+            </section>
+
+            <!-- Cabeçalho da tabela que exibirá os resultados da pesquisa -->
+            <section class="aluraquiz__types">
+                <table>
+                    <thead>
+                        <tr>
+                            <th li class="aluraquiz__types__item">
+                                Escola
+                            </th>
+                            <th li class="aluraquiz__types__item">
+                                Tem na Alura?
+                            </th>
+                            <th li class="aluraquiz__types__item">
+                                Programação
+                            </th>
+                            <th li class="aluraquiz__types__item">
+                                Formações
+                            </th>
+                            <th li class="aluraquiz__types__item">
+                                Cursos
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </section>
+            <!-- Corpo da tabela onde os resultados serão inseridos dinamicamente -->
+            <tbody class="aluraquiz__resultados" id="aluraquiz__resultados">
+            </tbody>
+        </section>
+        <!-- Segunda aba: conteúdo da seção "aluraPlanos" -->
+        <section data-tab-id="aluraPlanos" class="aluraplanos tab"> 
+            <!-- Imagem da logo da Alura -->
+            <img class="planos__image" src="./images/alura.svg" alt="logo alura">
+            <!-- Seção com as opções de planos da Alura -->
+            <div class="planos">
+                <div class="planos__items">
+                    <img class="planos__items__image" src="./images/cursos.png" alt="plano plus">
+                </div>
+            </div>
+            <!-- Link que leva para a página de assinatura da Alura -->
+            <a href="https://www.alura.com.br/planos-cursos-online" class="aluraplanos__botao">
+                Garanta sua assinatura
+            </a>
+        </section>
+        <!-- Terceira aba: conteúdo da seção "fiap" -->
+        <section data-tab-id="fiap" class="fiap tab">
+            <!-- Imagem da logo da FIAP -->
+            <img class="fiap__image" src="./images/fiap.svg" alt="logo fiap">
+            <!-- Links para os programas educacionais da FIAP -->
+            <div>
+                <a href="https://postech.fiap.com.br" class="button__fiap">
+                    Pós Tech
+                </a>
+                <a href="https://www.fiap.com.br/graduacao/" class="button__fiap">
+                    Graduação
+                </a>
+                <a href="https://www.fiap.com.br/mba/" class="button__fiap">
+                    MBA
+                </a>
+            </div>
+        </section>
+    </div>
+    <!-- Inclusão de scripts externos -->
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/show.js"></script>
+    <script src="./scripts/dados.js"></script>
+</body>
+</html>
