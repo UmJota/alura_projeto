@@ -8,21 +8,14 @@
     <link rel="stylesheet" href="https://use.typekit.net/bph3dvy.css">
 </head>
 <body>
-    <!-- Cabeçalho da página -->
     <header class="header">
-        <!-- Botão de informação que aciona a função info() ao ser clicado -->
         <button onclick="info()" class="button__info" id="info">
-            <!-- Ícone do botão de informação -->
             <img class="header__button__info" src="./images/info_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg" alt="botão de informação">
         </button>
-        <!-- Imagem do logotipo da Alura Quiz no cabeçalho -->
         <img class="header__image" src="./images/LOGO.png" alt="alura quiz logo">
     </header>
-    <!-- Seção principal que contém os tabs (abas) -->
     <div class="shows">
-        <!-- Navegação entre as abas -->
         <nav class="shows__tabs">
-            <!-- Cada botão representa uma aba e alterna entre elas quando clicado -->
             <button data-tab-button="aluraQuiz" class="shows__tabs__button shows__tabs__button--is-active">
                 alura quiz
             </button>
@@ -33,20 +26,14 @@
                 FIAP
             </button>
         </nav>
-
-        <!-- Primeira aba: conteúdo da seção "aluraQuiz" -->
         <section data-tab-id="aluraQuiz" class="aluraquiz tab tab--is-active">
             <section class="aluraquiz__header">
-                <h2 class="aluraquiz__header__text">Qual é a escola?</h2>
-                <!-- Input de pesquisa e botão de ação -->
+            <h2 class="aluraquiz__header__text">Qual é a escola?</h2>
                 <div class="aluraquiz__header__search">
                     <input type="text" placeholder="Digite o nome de uma escola" id="placeHolder">
-                    <!-- Botão que chama a função pesquisar() ao ser clicado -->
                     <button onclick="pesquisar()">Pesquisar</button>
                 </div>
             </section>
-
-            <!-- Cabeçalho da tabela que exibirá os resultados da pesquisa -->
             <section class="aluraquiz__types">
                 <table>
                     <thead>
@@ -68,32 +55,25 @@
                             </th>
                         </tr>
                     </thead>
-                </table>
             </section>
-            <!-- Corpo da tabela onde os resultados serão inseridos dinamicamente -->
             <tbody class="aluraquiz__resultados" id="aluraquiz__resultados">
             </tbody>
+            </table>
         </section>
-        <!-- Segunda aba: conteúdo da seção "aluraPlanos" -->
+        </section>
         <section data-tab-id="aluraPlanos" class="aluraplanos tab"> 
-            <!-- Imagem da logo da Alura -->
-            <img class="planos__image" src="./images/alura.svg" alt="logo alura">
-            <!-- Seção com as opções de planos da Alura -->
+                    <img class="planos__image" src="./images/alura.svg" alt="logo alura">
             <div class="planos">
                 <div class="planos__items">
                     <img class="planos__items__image" src="./images/cursos.png" alt="plano plus">
                 </div>
             </div>
-            <!-- Link que leva para a página de assinatura da Alura -->
             <a href="https://www.alura.com.br/planos-cursos-online" class="aluraplanos__botao">
                 Garanta sua assinatura
             </a>
         </section>
-        <!-- Terceira aba: conteúdo da seção "fiap" -->
-        <section data-tab-id="fiap" class="fiap tab">
-            <!-- Imagem da logo da FIAP -->
+        <section data-tab-id="fiap" class="fiap tab ">
             <img class="fiap__image" src="./images/fiap.svg" alt="logo fiap">
-            <!-- Links para os programas educacionais da FIAP -->
             <div>
                 <a href="https://postech.fiap.com.br" class="button__fiap">
                     Pós Tech
@@ -107,7 +87,6 @@
             </div>
         </section>
     </div>
-    <!-- Inclusão de scripts externos -->
     <script src="./scripts/main.js"></script>
     <script src="./scripts/show.js"></script>
     <script src="./scripts/dados.js"></script>
